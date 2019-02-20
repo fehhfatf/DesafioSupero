@@ -1,0 +1,63 @@
+﻿@model IEnumerable<DS.Domain.Entities.Servico>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Cliente
+        </th>
+        <th>
+            Fornecedor
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataDeAtendimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorDoAtendimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDeServico)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fornecedor.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataDeAtendimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorDoAtendimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDeServico)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ServicoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ServicoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ServicoId })
+        </td>
+    </tr>
+}
+
+</table>

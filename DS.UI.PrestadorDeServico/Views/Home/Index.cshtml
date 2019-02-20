@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Estatisticas</h1>
+    <p class="lead">Estatísticas de serviços prestados</p>    
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <table>
+            <tr>
+                <th>
+                    <h2>@Html.ActionLink("3 Clientes que mais gastam", "Os3ClientesQueMaisGastaramPorMes", "Servicos", new { area = "" }, new { @class = "navbar-brand" })</h2>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <p>3 clientes que mais gastaram em serviços por mês</p>
+                </td>
+            </tr>
+        </table>                        
+    </div>
+    <div class="col-md-4">
+        <table>
+            <tr>
+                <th>
+                    <h2>@Html.ActionLink("Média de valor", "MediaDoValorCobrado", "Servicos", new { area = "" }, new { @class = "navbar-brand" })</h2>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <p>Média de valor cobrado por fornecedor e tipo de serviço</p>
+                </td>
+            </tr>
+        </table>                        
+    </div>
+    <div class="col-md-4">
+        <table>
+            <tr>
+                <th>
+                    <h2>@Html.ActionLink("Fornecedores sem prestar atendimento", "FornecedorSemPrestarServicoNoMes", "Servicos", new { area = "" }, new { @class = "navbar-brand" })</h2>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <p>Lista de fornecedores sem prestar atendimento por mês no ano atual</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

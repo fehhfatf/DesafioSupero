@@ -1,0 +1,66 @@
+﻿@model DS.Domain.Entities.Servico
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Servico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fornecedor.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fornecedor.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDeAtendimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDeAtendimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorDoAtendimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorDoAtendimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoDeServico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoDeServico)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ServicoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

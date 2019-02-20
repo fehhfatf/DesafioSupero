@@ -1,0 +1,36 @@
+﻿@model IEnumerable<DS.Domain.Entities.Servico>
+<br />
+<p>
+
+    @using (Ajax.BeginForm("ServicoPorPeriodo", "Servicos", new AjaxOptions { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "divListaServicos" }))
+    {
+        @:De:                
+        @Html.TextBox("de")
+        @:Até:
+        @Html.TextBox("ate")        
+        @:Cliente:
+        @Html.TextBox("cliente")
+        <br/>
+        <br />
+        @:Estado:
+        @Html.TextBox("estado")
+        @:Cidade:
+        @Html.TextBox("cidade")
+        @:Bairro:
+        @Html.TextBox("Bairro")
+        <br />
+        <br />
+        @:Tipo de Serviço:
+        @Html.TextBox("tipoDeServico")
+        <input type="submit" value="Buscar" />
+    }
+<p />
+
+<div id="divListaServicos">
+    @{Html.Partial("_servicos", Model);}
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

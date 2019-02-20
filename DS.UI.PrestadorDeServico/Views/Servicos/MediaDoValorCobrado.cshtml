@@ -1,0 +1,37 @@
+﻿@model IEnumerable<DS.UI.PrestadorDeServico.Models.EstatisticaMediaValorFornecedor>
+
+@{
+    ViewBag.Title = "Media do valor cobrado";
+}
+
+<h2>Media do valor cobrado</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Fornecedor
+        </th>
+        <th>
+            Tipo de Servico
+        </th>
+        <th>
+            Media
+        </th>        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeDoFornecedor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDeServico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorMedio)
+        </td>
+    </tr>
+}
+
+</table>

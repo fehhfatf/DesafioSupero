@@ -1,0 +1,72 @@
+﻿@model DS.Domain.Entities.Servico
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Servico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fornecedor.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fornecedor.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDeAtendimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDeAtendimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorDoAtendimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorDoAtendimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoDeServico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoDeServico)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
